@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Subscriptions Pocket
 
-## Getting Started
+A simple web application for managing the user's subscriptions.
 
-First, run the development server:
+## Purpose
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+To practice the Next.js framework and and learn the newest features of the latest version 13.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Soon...
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Demo
 
-## Learn More
+The live demo is available at [https://subscriptions-pocket.vercel.app](https://subscriptions-pocket.vercel.app).
 
-To learn more about Next.js, take a look at the following resources:
+## Screenshot
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Soon...
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Used technologies
 
-## Deploy on Vercel
+- 🎁 **Repository:** standard Git repository
+- 🌈 **Framework:** next.js 13.4
+- 🛠️ **Tools:** soon...
+- 🎨 **Styling:** tailwind
+- 💎 **Others:** soon...
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## How to run
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Install [Node.js](https://nodejs.org/en/download/).
+2. Clone the repository.
+3. Type and run: `npm i` in the root directory.
+4. Type and run: `npm run dev` in the root directory.
+5. Open `http://localhost:3300` in your browser to see the app.
