@@ -1,3 +1,5 @@
+import { UserButton } from "@clerk/nextjs"
+
 export default function ApplicationLayout({
   children,
 }: {
@@ -5,7 +7,9 @@ export default function ApplicationLayout({
 }) {
   return (
     <div>
-      <aside>Aside application</aside>
+      <aside>
+        menu aside
+      </aside>
       <main>
         {children}
       </main>
