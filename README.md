@@ -20,7 +20,7 @@ Soon...
 - 🌈 **Framework:** next.js 13.4
 - 🛠️ **Tools:** prisma orm, svix
 - 🎨 **Styling:** tailwind, tailwind class sorter
-- 💎 **Others:** docker and docker-compose, clerk, vercel pipeline
+- 💎 **Others:** docker and docker-compose, dev containers, clerk, vercel pipeline
 
 ## Database
 
@@ -36,7 +36,7 @@ If you run the PostgreSQL locally in the Docker - replace the database name (lis
 
 ## Clerk
 
-This project uses the [Clerk](https://clerk.com/) as an authentication provider. To set up the project locally, you must create your Clerk account, create a new project, and generate your secrets listed below in the `How to run` paragraph. Notice the Clear also has to invoke a webhook `/api/webhook/user` to notify the application about the user's events, so the webhook secret is also needed (lines no. 2 - 4)
+This project uses the [Clerk](https://clerk.com/) as an authentication provider. To set up the project locally, you must create your Clerk account, create a new project, and generate your secrets listed below in the `How to run` paragraph. Notice the Clerk also has to invoke a webhook `/api/webhook/user` to notify the application about the user's events, so the webhook secret is also needed (lines no. 2 - 4)
 
 ## How to run
 
@@ -59,4 +59,6 @@ NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
 
 4. Type and run: `npm i` in the root directory.
 5. Type and run: `npm run dev` in the root directory.
-6. Open `http://localhost:3300` in your browser to see the app.
+6. Open `http://localhost:3000` in your browser to see the app.
+
+> The project is configured to run with the development container. Use Docker or GitHub Codespace to run the project in the hermetic environment.
