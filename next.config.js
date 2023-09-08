@@ -3,6 +3,11 @@ const nextConfig = {
   experimental: {
     typedRoutes: true,
   },
-}
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "img.clerk.com", port: "" },
+    ],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
