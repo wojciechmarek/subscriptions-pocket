@@ -11,8 +11,8 @@ To practice the Next.js framework and learn the newest features of the latest ve
 The live demo is available at [https://subscriptions-pocket.vercel.app](https://subscriptions-pocket.vercel.app).
 
 ## Screenshot
+![subpacket - landing](https://github.com/wojciechmarek/subscriptions-pocket/assets/27026036/89363279-f210-4c9a-a6a1-632951a6711a)
 
-Soon...
 
 ## Used technologies
 
