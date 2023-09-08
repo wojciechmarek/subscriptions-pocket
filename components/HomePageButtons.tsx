@@ -1,6 +1,7 @@
 "use client";
 
 import { UserButton, useUser } from "@clerk/nextjs";
+import { Route } from "next";
 import Link from "next/link";
 
 export default function HomePageButtons() {
@@ -15,8 +16,8 @@ export default function HomePageButtons() {
         </>
       ) : (
         <>
-          <Link href={"/sign-up"}>Sign Up</Link>
-          <Link href={"/sign-in"}>Sign In</Link>
+          <Link href={"/sign-up" as Route}>Sign Up</Link>
+          <Link href={"/sign-in" as Route}>Sign In</Link>
         </>
       )}
     </div>
