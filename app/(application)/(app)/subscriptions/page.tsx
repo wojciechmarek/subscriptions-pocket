@@ -1,7 +1,9 @@
+import AppContentHeader from "@/components/AppContentHeader";
+
 export default function SubscriptionsPage() {
   return (
-    <main>
-      Subscriptions
-    </main>
+    <section className="h-full p-8">
+      <AppContentHeader title="Subscriptions" />
+    </section>
   )
 }
