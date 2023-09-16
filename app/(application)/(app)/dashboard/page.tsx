@@ -1,4 +1,5 @@
 import AppContentHeader from "@/components/AppContentHeader";
+import DashboardCatBreakdown from "@/components/DashboardCatBreakdown";
 import DashboardMainStats from "@/components/DashboardMainStats";
 import SingleStats from "@/components/SingleStats";
 import { prisma } from "@/lib/db";
@@ -40,7 +41,7 @@ export default async function DashboardPage() {
       <div className="grid mx-auto h-full max-w-7xl grid-cols-3 grid-rows-[80px,_1fr] gap-6 py-6">
         <DashboardMainStats subscriptions={data ?? []} />
         <div className="col-span-3 row-start-2 row-end-3 p-6 rounded-xl bg-zinc-50 xl:col-span-2">stats</div>
-        <div className="hidden row-span-2 rounded-xl bg-zinc-50 xl:flex">stats</div>
+        <DashboardCatBreakdown data={data ?? []} />
       </div>
     </section>
   )

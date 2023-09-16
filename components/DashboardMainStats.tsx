@@ -1,4 +1,4 @@
-import { SUBSCRIPTION_CURRENCY, Subscription } from "@prisma/client";
+import { PAYMENT_STATUS, SUBSCRIPTION_CURRENCY, Subscription } from "@prisma/client";
 import SingleStats from "./SingleStats";
 import { format } from "date-fns";
 
@@ -44,7 +44,7 @@ function summarizePaymentAmounts(subscriptions: Subscription[]) {
   subscriptions.forEach((subscription) => {
     if (subscription.currency === SUBSCRIPTION_CURRENCY.EUR) {
       subscription.payments.forEach((payment) => {
-        if (payment.is_paid) {
+        if (payment.status === PAYMENT_STATUS.PAID) {
           totalPaidEuro += payment.amount;
         } else {
           totalNotPaidEuro += payment.amount;
@@ -54,7 +54,7 @@ function summarizePaymentAmounts(subscriptions: Subscription[]) {
 
     if (subscription.currency === SUBSCRIPTION_CURRENCY.PLN) {
       subscription.payments.forEach((payment) => {
-        if (payment.is_paid) {
+        if (payment.status === PAYMENT_STATUS.PAID) {
           totalPaidPln += payment.amount;
         } else {
           totalNotPaidPln += payment.amount;
@@ -64,7 +64,7 @@ function summarizePaymentAmounts(subscriptions: Subscription[]) {
 
     if (subscription.currency === SUBSCRIPTION_CURRENCY.USD) {
       subscription.payments.forEach((payment) => {
-        if (payment.is_paid) {
+        if (payment.status === PAYMENT_STATUS.PAID) {
           totalPaidUsd += payment.amount;
         } else {
           totalNotPaidUsd += payment.amount;
@@ -108,7 +108,6 @@ export default function DashboardMainStats(props: DashboardMainStatsProps) {
           <h1 className="text-xl font-semibold leading-5 tracking-wide">{format(new Date(), "LLLL")}</h1>
           <p className="text-xs text-zinc-500">{format(new Date(), "yyyy")}</p>
         </div>
-
         <div className="flex gap-6">
           <SingleStats sum={sumStillToPaid} currency={SUBSCRIPTION_CURRENCY.PLN} description="Still to pay" />
           <SingleStats sum={sumAlreadyPaid} currency={SUBSCRIPTION_CURRENCY.PLN} description="Already paid" />
