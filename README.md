@@ -11,8 +11,8 @@ To practice the Next.js framework and learn the newest features of the latest ve
 The live demo is available at [https://subscriptions-pocket.vercel.app](https://subscriptions-pocket.vercel.app).
 
 ## Screenshot
-![subpacket - landing](https://github.com/wojciechmarek/subscriptions-pocket/assets/27026036/89363279-f210-4c9a-a6a1-632951a6711a)
 
+![subpacket - landing](https://github.com/wojciechmarek/subscriptions-pocket/assets/27026036/89363279-f210-4c9a-a6a1-632951a6711a)
 
 ## Used technologies
 
@@ -28,9 +28,10 @@ This project uses a PostgreSQL database and Prisma ORM. The database schema is i
 
 The suggested way to run the database is to use Docker. The `docker-compose.yml` file contains the configuration for the database and the adminer tool. To run and init the database, type, and run:
 
-1. `docker-compose up -d` in the root directory to start the database and adminer.
-2. `npx prisma migrate dev --name init` in the root directory to init the database.
-3. `npx prisma studio` in the root directory to see the database in the browser-based GUI tool.
+1. `docker-compose up -d` in the root directory to create and start the database and adminer.
+2. `npx prisma migrate dev --name init` in the root directory to make migrations in the database.
+3. `npx prisma db seed` in the root directory to seed the data (👉 change the user id or email marked by the comments in the file: `/prisma/seed.ts`).
+4. `npx prisma studio` in the root directory to see the database in the browser-based GUI tool.
 
 If you run the PostgreSQL locally in the Docker - replace the database name (listed in the `How to run` section) `POSTGRES_DB` as well `POSTGRES_USER` and `POSTGRES_PASSWORD` with the database default ones from the `docker-compose.yml` file (line no. 1)
 

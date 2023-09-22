@@ -40,7 +40,8 @@ const nextPaymentMonthGenerator = (
 async function main() {
   const user = await prisma.user.upsert({
     where: {
-      id: "user_2RNUUXN19PF3n0tsUnSFHlJhn4E",
+      id: "user_2V3s7YNFXa5snvgap6AwIEZV0nI", // 👈 replace this with your own id
+      // email: "email", // 👈 replace this with your own email
     },
     update: {
       subscriptions: {
