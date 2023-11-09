@@ -1,6 +1,7 @@
 import { ClerkProvider } from '@clerk/nextjs'
 import './globals.css'
 import type { Metadata } from 'next'
+import { inject } from '@vercel/analytics';
 
 export const metadata: Metadata = {
   title: 'Subscriptions pocket',
@@ -12,6 +13,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  inject();
   return (
     <ClerkProvider>
       <html lang="en">
